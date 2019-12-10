@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../homework5-dayplanner/style.css">
+        <title>Day-Planner</title>
+    </head>
+    <body>
+        <div class="jumbotron" id="openQuiz">
+            <h1 id="codequiz">Work Day Scheduler</h1>
+            <h3>A simple calendar app for scheduling your day!</h3>
+            <h3 id ="date"></h3>
+            <!-- get moment.js date working here -->
+        </div>
+        <div class="container">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col" class="col-8">Activity</th>
+                <th scope="col" class="col-2">Save</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">9am</th>
+                <td id="NineAm"><input class="middle" type=text></td>
+                <td><form><input type=submit value="save" style="width:100%" class="save" id="NineAmSave"></form></td>
+              </tr>
+              <tr>
+                <th scope="row">10am</th>
+                <td id="TenAm"><input class="middle" type=text></td>
+                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+              </tr>
+              <tr>
+                <th scope="row">11am</th>
+                <td id="ElevenAm"><input class="middle" type=text></td>
+                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+              </tr>
+              <tr>
+                <th scope="row">12pm</th>
+                <td id="TwelvePm"><input class="middle" type=text></td>
+                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+              </tr>
+              <tr>
+                <th scope="row">1pm</th>
+                <td id="OnePm"><input class="middle" type=text></td>
+                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+              </tr>
+              <tr>
+                <th scope="row">2pm</th>
+                <td id="TwoPm"><input class="middle" type=text></td>
+                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+              </tr>
+              <tr>
+                <th scope="row">3pm</th>
+                <td id="ThreePm"><input class="middle" type=text></td>
+                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+              </tr>
+              <tr>
+                <th scope="row">4pm</th>
+                <td id="FourPm"><input class="middle" type=text></td>
+                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <script src="../homework5-dayplanner/script.js"></script>
+        <script src="../homework5-dayplanner/lib/moment/moment.min.js"></script>
+        <script>
+        //Current Date
+        let m = moment().format("dddd" + " Do" + " MMMM");
+        var x = document.getElementById("date").textContent = (m)
+        console.log(`toString() => ${m.toString()}`);
+
+        // take current time and apply to rows if in past wheat current red future green
+       
+        let t = moment().format("hh" + ":mm" + ":ss");
+        console.log(`toString() => ${t.toString()}`);
+
+        var twelvePm = document.querySelector("#TwelvePm");
+       let time = moment().format("hh");
+       time = `toString() => ${time.toString()}`;
+       if (time === 12) {
+        twelvePm.setAttribute("style", "background-color: red;");
+       }
+        </script>
+    </body>
+</html>
