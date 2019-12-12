@@ -12,42 +12,42 @@
 let time = moment().format("hh");
 time = `${time.toString()}`;
 console.log(`${time.toString()}`);
-if (time === 09) {
+if (time === "09") {
     console.log("got here");
     $("#NineAm").addClass("present");
     $("#TenAm, #ElevenAm, #TwelvePm, #OnePm, #TwoPm, #ThreePm, #FourPm").addClass("future");
 }
-else if (time === 10) {
+else if (time === "10") {
     console.log("got here");
  $("#TenAm").addClass("present");
  $("#NineAm").addClass("past");
  $("#ElevenAm, #TwelvePm, #OnePm, #TwoPm, #ThreePm, #FourPm").addClass("future");
 }
-else if (time === 11) {
+else if (time === "11") {
     console.log("got here");
  $("#ElevenAm").addClass("present");
  $("#NineAm, #TenAm").addClass("past");
  $("#TwelvePm, #OnePm, #TwoPm, #ThreePm, #FourPm").addClass("future");
 }
-else if (time === 12) {
+else if (time === "12") {
     console.log("got here");
  $("#TwelvePm").addClass("present");
  $("#NineAm, #TenAm, #ElevenAm").addClass("past");
  $("#OnePm, #TwoPm, #ThreePm, #FourPm").addClass("future");
 }
-else if (time === 01) {
+else if (time === "01") {
     console.log("got here");
  $("#OnePm").addClass("present");
  $("#NineAm, #TenAm, #ElevenAm, #TwelvePm").addClass("past");
  $("#TwoPm, #ThreePm, #FourPm").addClass("future");
 }
-else if (time === 02) {
+else if (time === "02") {
     console.log("got here");
  $("#TwoPm").addClass("present");
  $("#NineAm, #TenAm, #ElevenAm, #TwelvePm, #OnePm,").addClass("past");
  $("#ThreePm, #FourPm").addClass("future");
 }
-else if (time === 03) {
+else if (time === "03") {
     console.log("got here");
  $("#ThreePm").addClass("present");
  $("#NineAm, #TenAm, #ElevenAm, #TwelvePm, #OnePm, #TwoPm").addClass("past");
