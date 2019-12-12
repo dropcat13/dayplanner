@@ -41,3 +41,15 @@ body{
    clear:right;
    float:right;
 }
+
+.past {
+    background-color: #d3d3d3;
+  }
+  
+.present {
+    background-color: #ff6961;
+  }
+  
+.future {
+    background-color: #77dd77;
+  }

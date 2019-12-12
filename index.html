@@ -25,68 +25,55 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr id="NineAmSection">
                 <th scope="row">9am</th>
-                <td id="NineAm"><input class="middle" type=text></td>
-                <td><form><input type=submit value="save" style="width:100%" class="save" id="NineAmSave"></form></td>
+                <td class="userInput" id="NineAm"><input class="middle" type=text></td>
+                <td class="saveButton"><form><input type=submit value="save" style="width:100%" class="save"></form></td>
               </tr>
               <tr>
                 <th scope="row">10am</th>
-                <td id="TenAm"><input class="middle" type=text></td>
-                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+                <td class="userInput" id="TenAm"><input class="middle" type=text></td>
+                <td class="saveButton"><form><input type=submit value="save" style="width:100%" class="save"></form></td>
               </tr>
               <tr>
                 <th scope="row">11am</th>
-                <td id="ElevenAm"><input class="middle" type=text></td>
-                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+                <td class="userInput" id="ElevenAm"><input class="middle" type=text></td>
+                <td class="saveButton"><form><input type=submit value="save" style="width:100%" class="save"></form></td>
               </tr>
               <tr>
                 <th scope="row">12pm</th>
-                <td id="TwelvePm"><input class="middle" type=text></td>
-                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+                <td class="userInput" id="TwelvePm"><input class="middle" type=text></td>
+                <td class="saveButton"><form><input type=submit value="save" style="width:100%" class="save"></form></td>
               </tr>
               <tr>
                 <th scope="row">1pm</th>
-                <td id="OnePm"><input class="middle" type=text></td>
-                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+                <td class="userInput" id="OnePm"><input class="middle" type=text></td>
+                <td class="saveButton"><form><input type=submit value="save" style="width:100%" class="save"></form></td>
               </tr>
               <tr>
                 <th scope="row">2pm</th>
-                <td id="TwoPm"><input class="middle" type=text></td>
-                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+                <td class="userInput" id="TwoPm"><input class="middle" type=text></td>
+                <td class="saveButton"><form><input type=submit value="save" style="width:100%" class="save"></form></td>
               </tr>
               <tr>
                 <th scope="row">3pm</th>
-                <td id="ThreePm"><input class="middle" type=text></td>
-                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+                <td class="userInput" id="ThreePm"><input class="middle" type=text></td>
+                <td class="saveButton"><form><input type=submit value="save" style="width:100%" class="save"></form></td>
               </tr>
               <tr>
                 <th scope="row">4pm</th>
-                <td id="FourPm"><input class="middle" type=text></td>
-                <td><form><input type=submit value="save" style="width:100%" class="save"></form></td>
+                <td class="userInput" id="FourPm"><input class="middle" type=text></td>
+                <td class="saveButton"><form><input type=submit value="save" style="width:100%" class="save"></form></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <script src="../homework5-dayplanner/script.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="../homework5-dayplanner/lib/moment/moment.min.js"></script>
-        <script>
-        //Current Date
-        let m = moment().format("dddd" + " Do" + " MMMM");
-        var x = document.getElementById("date").textContent = (m)
-        console.log(`toString() => ${m.toString()}`);
-
-        // take current time and apply to rows if in past wheat current red future green
-       
-        let t = moment().format("hh" + ":mm" + ":ss");
-        console.log(`toString() => ${t.toString()}`);
-
-        var twelvePm = document.querySelector("#TwelvePm");
-       let time = moment().format("hh");
-       time = `toString() => ${time.toString()}`;
-       if (time === 12) {
-        twelvePm.setAttribute("style", "background-color: red;");
-       }
-        </script>
+        <script src="../homework5-dayplanner/script.js"></script>
     </body>
 </html>
