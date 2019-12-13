@@ -5,11 +5,11 @@
 
  // take current time and apply to rows if in past wheat current red future green
 
- let t = moment().format("hh" + ":mm" + ":ss");
+ let t = moment().format("HH" + ":mm" + ":ss");
  console.log(`${t.toString()}`);
 
  var twelvePm = document.querySelector("#TwelvePm");
-let time = moment().format("hh");
+let time = moment().format("HH");
 time = `${time.toString()}`;
 console.log(`${time.toString()}`);
 if (time === "09") {
@@ -35,25 +35,25 @@ else if (time === "12") {
  $("#NineAm, #TenAm, #ElevenAm").addClass("past");
  $("#OnePm, #TwoPm, #ThreePm, #FourPm").addClass("future");
 }
-else if (time === "01") {
+else if (time === "13") {
     console.log("got here");
  $("#OnePm").addClass("present");
  $("#NineAm, #TenAm, #ElevenAm, #TwelvePm").addClass("past");
  $("#TwoPm, #ThreePm, #FourPm").addClass("future");
 }
-else if (time === "02") {
+else if (time === "14") {
     console.log("got here");
  $("#TwoPm").addClass("present");
  $("#NineAm, #TenAm, #ElevenAm, #TwelvePm, #OnePm,").addClass("past");
  $("#ThreePm, #FourPm").addClass("future");
 }
-else if (time === "03") {
+else if (time === "15") {
     console.log("got here");
  $("#ThreePm").addClass("present");
  $("#NineAm, #TenAm, #ElevenAm, #TwelvePm, #OnePm, #TwoPm").addClass("past");
  $("#FourPm").addClass("future");
 }
-else if (time === "04") {
+else if (time === "16") {
     console.log("got here");
  $("#FourPm").addClass("present");
  $("#NineAm, #TenAm, #ElevenAm, #TwelvePm, #OnePm, #TwoPm, #ThreePm").addClass("past");
@@ -72,6 +72,7 @@ $(".saveButton").on("click", function(event) {
     localStorage.setItem(key, value);
 });
 
+let userData_returned = JSON.parse(localStorage.getItem("userData"));
 
 // // Retrieve the object from storage
 // var retrievedObject = localStorage.getItem('testObject');
