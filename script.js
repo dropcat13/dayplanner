@@ -59,6 +59,9 @@ else if (time === "16") {
  $("#NineAm, #TenAm, #ElevenAm, #TwelvePm, #OnePm, #TwoPm, #ThreePm").addClass("past");
 }
 
+window.onbeforeunload = function() {
+    localStorage.getItem("userData", $('.middle').val());
+}
 
 let DaysSchedule = [];
 
@@ -72,15 +75,5 @@ $(".saveButton").on("click", function(event) {
     localStorage.setItem(key, value);
 });
 
-let userData_returned = JSON.parse(localStorage.getItem("userData"));
+// let userData_returned = JSON.parse(localStorage.getItem("userData"));
 
-// // Retrieve the object from storage
-// var retrievedObject = localStorage.getItem('testObject');
-
-// console.log('retrievedObject: ', JSON.parse(retrievedObject));
-
-    // you can use jquery for this!!
-
-    // default is green --- in the future
-    // current hour is red 
-    // past hour is wheat
