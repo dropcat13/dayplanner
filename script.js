@@ -60,7 +60,7 @@ else if (time === "16") {
 }
 
 window.onbeforeunload = function() {
-    localStorage.getItem("userData", $('.middle').val());
+    localStorage.getItem("value", $('.middle').val());
 }
 
 let DaysSchedule = [];
