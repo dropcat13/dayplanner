@@ -6,7 +6,7 @@ The user needs to organise their day. This website allows them to do that. the w
 ### Link to deployed webpage
  * [deployed webpage](https://dropcat13.github.io/homework5)
 
-### Link to screenshot of deployed website
+### Screenshot
  ![image](https://user-images.githubusercontent.com/12642091/70768529-8d564400-1d33-11ea-8fa8-dfce370684cd.png)
 
 
